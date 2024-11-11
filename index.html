@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma de Desenvolvimento de Sistemas</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 5px solid #264653;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2a9d8f;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            background-color: #264653;
+            border-bottom: 3px solid #2a9d8f;
+        }
+
+        .tab-button {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .tab-button:hover {
+            background-color: #264653;
+        }
+
+        .tab-button.active {
+            background-color: #264653;
+            border-bottom: 3px solid #2a9d8f;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        footer {
+            background-color: #264653;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+            position: relative;
+        }
+
+        footer p {
+            color: white;
+            font-size: 1.1em;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .professor {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .professor img {
+            border-radius: 8px;
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px;
+            border: 2px solid #2a9d8f;
+        }
+
+        .professor-text {
+            max-width: 800px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            color: #2a9d8f;
+            font-size: 1.5em;
+        }
+
+        .project p {
+            color: #555;
+        }
+
+        .code-button {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .code-button:hover {
+            background-color: #264653;
+        }
+
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .input-field {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Turma de 1° Ano de Desenvolvimento de Sistemas</h1>
+    <p>Bem-vindo ao nosso espaço na amostra pedagógica!</p>
+</header>
+
+<div class="tabs">
+    <button class="tab-button active" onclick="showTab('sobre')">Sobre</button>
+    <button class="tab-button" onclick="showTab('projetos')">Projetos</button>
+    <button class="tab-button" onclick="showTab('professores')">Professores</button>
+</div>
+
+<div class="container">
+    <!-- Sobre -->
+    <div id="sobre" class="tab-content active">
+        <h2>Sobre a Turma</h2>
+        <p>Somos a turma de 1º ano de Desenvolvimento de Sistemas de 2024, do Colégio Estadual Cívico-Militar Tancredo de Almeida Neves, localizado na Rua José Carlos Pace, 1866, no bairro Parque Residencial Morumbi II, em Foz do Iguaçu, PR. Aqui, vivemos uma experiência única, integrando o ensino médio ao curso técnico, que nos permite aprender conteúdos essenciais e, ao mesmo tempo, explorar o mundo da tecnologia e da programação.</p>
+        <p>Nosso ambiente de estudo, além de oferecer uma estrutura que atende às nossas necessidades, nos proporciona um espaço onde trabalhamos juntos para desenvolver habilidades em lógica computacional, programação e desenvolvimento de software. Orientados por professores dedicados, encaramos desafios reais, colocando em prática os conceitos que aprendemos e crescendo como futuros desenvolvedores.</p>
+        <p>Aqui, não somos apenas colegas de turma. Somos um grupo que compartilha o desejo de aprender, inovar e colaborar, com o sonho de transformar ideias em soluções tecnológicas. O Colégio Tancredo de Almeida Neves se tornou nosso ponto de partida para o futuro, onde cultivamos tanto o conhecimento técnico quanto os valores de disciplina, trabalho em equipe e compromisso com o aprendizado.</p>
+    </div>
+
+    <!-- Projetos -->
+    <div id="projetos" class="tab-content">
+        <h2>Nossos Projetos</h2>
+        
+        <div class="project">
+            <h3>Projeto 1: Tabuada Personalizada</h3>
+            <p>Digite um número para ver sua tabuada.</p>
+            <input type="number" id="numero" placeholder="Digite um número">
+            <button onclick="gerarTabuada()">Gerar Tabuada</button>
+            <div id="tabuada"></div>
+            <button class="code-button" onclick="toggleCode('code1')">Mostrar Código</button>
+            <div id="code1" class="code">
+                <pre>
+function gerarTabuada() {
+    let tabuadaDiv = document.getElementById("tabuada");
+    tabuadaDiv.innerHTML = "";
+    let numero = parseInt(document.getElementById("numero").value);
+    if (!isNaN(numero)) {
+        for (let i = 1; i <= 10; i++) {
+            tabuadaDiv.innerHTML += `${numero} x ${i} = ${numero * i}<br>`;
+        }
+    } else {
+        tabuadaDiv.innerHTML = "Por favor, insira um número válido.";
+    }
+}
+                </pre>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Projeto 2: Cálculo de Média</h3>
+            <p>Informe a matéria, o número de trimestres e suas notas para calcular a média.</p>
+            <div class="input-field">
+                <label>Matéria: </label>
+                <input type="text" id="materia" placeholder="Digite a matéria">
+            </div>
+            <div class="input-field">
+                <label>Quantidade de Trimestres: </label>
+                <input type="number" id="trimestres" placeholder="Digite o número de trimestres" oninput="gerarCamposNotas()">
+            </div>
+            <div id="camposNotas"></div>
+            <button onclick="calcularMedia()">Calcular Média</button>
+            <div id="resultadoMedia"></div>
+            <button class="code-button" onclick="toggleCode('code2')">Mostrar Código</button>
+            <div id="code2" class="code">
+                <pre>
+function gerarCamposNotas() {
+    let trimestres = document.getElementById("trimestres").value;
+    let camposNotasDiv = document.getElementById("camposNotas");
+    camposNotasDiv.innerHTML = "";
+    
+    if (trimestres > 0) {
+        for (let i = 1; i <= trimestres; i++) {
+            camposNotasDiv.innerHTML += `
+                <div class="input-field">
+                    <label>Nota do ${i}° Trimestre: </label>
+                    <input type="number" id="nota${i}" placeholder="Digite a nota do ${i}° trimestre">
+                </div>
+            `;
+        }
+    }
+}
+                
+function calcularMedia() {
+    let trimestres = document.getElementById("trimestres").value;
+    let somaNotas = 0;
+    
+    for (let i = 1; i <= trimestres; i++) {
+        let nota = parseFloat(document.getElementById("nota" + i).value);
+        if (!isNaN(nota)) {
+            somaNotas += nota;
+        }
+    }
+    
+    let media = somaNotas / trimestres;
+    document.getElementById("resultadoMedia").innerHTML = `A média é: ${media.toFixed(2)}`;
+}
+                </pre>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Projeto 3: Gerador de Senha</h3>
+            <p>Crie uma senha aleatória com a quantidade de caracteres que desejar.</p>
+            <div class="input-field">
+                <label>Quantidade de Caracteres: </label>
+                <input type="number" id="caracteres" placeholder="Digite a quantidade de caracteres">
+            </div>
+            <button onclick="gerarSenha()">Gerar Senha</button>
+            <div id="senhaGerada"></div>
+            <button class="code-button" onclick="toggleCode('code3')">Mostrar Código</button>
+            <div id="code3" class="code">
+                <pre>
+                    function gerarSenha() {
+                        let caracteres = document.getElementById("caracteres").value;
+                        let caracteresDisponiveis = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+                        let senha = "";
+                        for (let i = 0; i < caracteres; i++) {
+                            senha += caracteresDisponiveis.charAt(Math.floor(Math.random() * caracteresDisponiveis.length));
+                        }
+                        document.getElementById("senhaGerada").innerHTML = `Senha gerada: ${senha}`;
+                    }
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professores -->
+    <div id="professores" class="tab-content">
+        <h2>Nossos Professores</h2>
+
+        <div class="professor">
+            <a href="https://ibb.co/Bzx4ddj"><img src="https://i.ibb.co/Ss8QWW0/Whats-App-Image-2024-11-07-at-21-29-01-1.jpg" alt="Whats-App-Image-2024-11-07-at-21-29-01-1"/></a>
+            <div class="professor-text">
+                <h3>Professor Teotonio</h3>
+                <p>Teotonio é o professor responsável pela disciplina de Lógica Computacional no primeiro ano de Desenvolvimento de Sistemas do curso técnico do ensino médio. Sua missão é ensinar aos alunos os fundamentos essenciais da lógica que sustentam o raciocínio computacional. Ele prepara os estudantes para desenvolverem habilidades em análise de problemas e elaboração de soluções baseadas em lógica matemática, algo crucial para a programação de sistemas e a construção de algoritmos eficientes. Com uma abordagem focada no pensamento crítico, Teotonio incentiva seus alunos a pensar de forma estruturada e a aplicar esses conceitos em desafios práticos, proporcionando uma base sólida para as disciplinas mais avançadas no curso.</p>
+            </div>
+        </div>
+
+        <div class="professor">
+            <a href="https://ibb.co/GMY87tN"><img src="https://i.ibb.co/myZ2JXg/Whats-App-Image-2024-11-07-at-21-29-01.jpg" alt="Whats-App-Image-2024-11-07-at-21-29-01"/></a>
+            <div class="professor-text">
+                <h3>Professor Marcelo</h3>
+                <p>Marcelo leciona as disciplinas de Análise e Projeto de Sistemas e Ciência da Computação no primeiro ano de Desenvolvimento de Sistemas do curso técnico de ensino médio, com um enfoque abrangente tanto em hardware quanto em software. Ele não só ensina os conceitos teóricos e práticas de desenvolvimento de sistemas, mas também compartilha seu vasto conhecimento em hardware. Marcelo orienta seus alunos na montagem de computadores, identificação e instalação de peças, além de como formatar sistemas operacionais, especialmente o Windows, e realizar a instalação completa do sistema. Sua abordagem prática e teórica permite que os estudantes se familiarizem com todos os aspectos do funcionamento de um computador, preparando-os para enfrentar desafios técnicos no mundo da informática, tanto no nível de software quanto no de hardware. Essa combinação de habilidades os capacita a serem profissionais completos e prontos para atuar nas diversas áreas da Tecnologia da Informação.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Turma de 1° Ano de Desenvolvimento de Sistemas | Heitor Oliveira</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+        
+        document.getElementById(tabId).classList.add('active');
+        
+        const activeButton = Array.from(buttons).find(button => button.innerText.toLowerCase() === tabId);
+        activeButton.classList.add('active');
+    }
+
+    function toggleCode(codeId) {
+        const codeBlock = document.getElementById(codeId);
+        codeBlock.style.display = codeBlock.style.display === "none" ? "block" : "none";
+    }
+
+    // Função da Tabuada
+    function gerarTabuada() {
+        let tabuadaDiv = document.getElementById("tabuada");
+        tabuadaDiv.innerHTML = "";
+        let numero = parseInt(document.getElementById("numero").value);
+        if (!isNaN(numero)) {
+            for (let i = 1; i <= 10; i++) {
+                tabuadaDiv.innerHTML += `${numero} x ${i} = ${numero * i}<br>`;
+            }
+        } else {
+            tabuadaDiv.innerHTML = "Por favor, insira um número válido.";
+        }
+    }
+
+    // Função de gerar senha
+    function gerarSenha() {
+    let caracteres = document.getElementById("caracteres").value;
+    let caracteresDisponiveis = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+    let senha = "";
+    for (let i = 0; i < caracteres; i++) {
+        senha += caracteresDisponiveis.charAt(Math.floor(Math.random() * caracteresDisponiveis.length));
+    }
+    document.getElementById("senhaGerada").innerHTML = `Senha gerada: ${senha}`;
+}
+    
+    // Função de Calcular média
+    function gerarCamposNotas() {
+        let trimestres = document.getElementById("trimestres").value;
+        let camposNotasDiv = document.getElementById("camposNotas");
+        camposNotasDiv.innerHTML = "";
+        
+        if (trimestres > 0) {
+            for (let i = 1; i <= trimestres; i++) {
+                camposNotasDiv.innerHTML += `
+                    <div class="input-field">
+                        <label>Nota do ${i}° Trimestre: </label>
+                        <input type="number" id="nota${i}" placeholder="Digite a nota do ${i}° trimestre">
+                    </div>
+                `;
+            }
+        }
+    }
+
+    function calcularMedia() {
+        let trimestres = document.getElementById("trimestres").value;
+        let somaNotas = 0;
+        
+        for (let i = 1; i <= trimestres; i++) {
+            let nota = parseFloat(document.getElementById("nota" + i).value);
+            if (!isNaN(nota)) {
+                somaNotas += nota;
+            }
+        }
+        
+        let media = somaNotas / trimestres;
+        document.getElementById("resultadoMedia").innerHTML = `A média é: ${media.toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
