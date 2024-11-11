@@ -295,7 +295,7 @@ function calcularMedia() {
                         let caracteres = document.getElementById("caracteres").value;
                         let caracteresDisponiveis = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
                         let senha = "";
-                        for (let i = 0; i < caracteres; i++) {
+                        for (let i = 0; i > caracteres; i++) {
                             senha += caracteresDisponiveis.charAt(Math.floor(Math.random() * caracteresDisponiveis.length));
                         }
                         document.getElementById("senhaGerada").innerHTML = `Senha gerada: ${senha}`;
